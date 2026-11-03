@@ -1,0 +1,17 @@
+$ coverage run --branch -m pytest BranchCoverageTest_PES1UG24CS421_course_registration.py
+============================= test session starts ==============================
+platform darwin -- Python 3.15.0, pytest-9.2.0, pluggy-1.7.0
+rootdir: /private/tmp/claude-501/-Users-sanjana/37638b09-3588-4461-a8c3-9b95024245e0/scratchpad/target/Lab6
+collected 30 items
+
+BranchCoverageTest_PES1UG24CS421_course_registration.py ................ [ 53%]
+..............                                                           [100%]
+
+============================== 30 passed in 0.05s ==============================
+$ coverage report -m
+Name                                                      Stmts   Miss Branch BrPart  Cover   Missing
+-----------------------------------------------------------------------------------------------------
+BranchCoverageTest_PES1UG24CS421_course_registration.py      67      0      0      0   100%
+course_registration.py                                       32      0     24      0   100%
+-----------------------------------------------------------------------------------------------------
+TOTAL                                                        99      0     24      0   100%
