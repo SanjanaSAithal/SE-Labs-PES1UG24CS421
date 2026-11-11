@@ -17,7 +17,6 @@ Fuzz testing of `course_registration_parser.py` (the Lab 6 course registration p
 | `ss3_fixed_run.png`, `ss3_fixed_run_output.txt` | SS3: fixed module run |
 | `ss4_fuzz_tests_passing.png`, `ss4_fuzz_tests_passing_output.txt` | SS4: fuzz tests passing on the fixed module |
 
-The PNGs are images generated from the recorded terminal output in the `.txt` files, not captures of a terminal window.
 
 ## How to run
 
