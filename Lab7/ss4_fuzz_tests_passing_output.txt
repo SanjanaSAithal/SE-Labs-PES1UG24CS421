@@ -1,0 +1,12 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.15.0, pytest-9.2.0, pluggy-1.7.0 -- python
+hypothesis profile 'default'
+rootdir: Lab7
+plugins: hypothesis-6.170.15
+collecting ... collected 3 items
+
+test_course_registration_parser.py::test_format_course_code_no_crash PASSED [ 33%]
+test_course_registration_parser.py::test_total_credits_no_crash PASSED   [ 66%]
+test_course_registration_parser.py::test_parse_student_record_no_crash PASSED [100%]
+
+============================== 3 passed in 0.88s ===============================

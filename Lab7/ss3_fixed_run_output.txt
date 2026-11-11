@@ -1,0 +1,25 @@
+$ python course_registration_parser.py
+==== Running format_course_code ====
+Enter a course code as DEPT NUMBER (e.g. cs 301): cs 301
+Formatted course code: CS301
+
+==== Running total_credits ====
+Enter course credits separated by commas (e.g. 4,3,4): 4,3,4
+Total credits: 11
+
+==== Running parse_student_record ====
+Enter a student record as SRN|name|status (e.g. pes1ug23cs001|Asha|regular): pes1ug23cs001|Asha|regular
+Student record: {'srn': 'PES1UG23CS001', 'name': 'Asha', 'status': 'regular'}
+
+$ python course_registration_parser.py
+==== Running format_course_code ====
+Enter a course code as DEPT NUMBER (e.g. cs 301): cs301
+Invalid course code: 'cs301'
+
+==== Running total_credits ====
+Enter course credits separated by commas (e.g. 4,3,4): 4,,3
+Invalid credit list: '4,,3'
+
+==== Running parse_student_record ====
+Enter a student record as SRN|name|status (e.g. pes1ug23cs001|Asha|regular): pes1ug23cs001|Asha
+Invalid student record: 'pes1ug23cs001|Asha'
