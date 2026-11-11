@@ -11,7 +11,7 @@ Fuzz testing of `course_registration_parser.py` (the Lab 6 course registration p
 |------|-------------|
 | `course_registration_parser.py` | Fixed module: all three functions handle any input without crashing |
 | `test_course_registration_parser.py` | Completed Hypothesis fuzz tests, one per function |
-| `PES1UG24CS421_SanjanaSAithal_LAB7.pdf` | Consolidated report: SS1 to SS4, bugs and fixes, both source files |
+| `CS421_Sanjana_Lab7.pdf` | Consolidated report: SS1 to SS4, bugs and fixes, both source files |
 | `ss1_original_run.png`, `ss1_original_run_output.txt` | SS1: original module run |
 | `ss2_fuzz_tests_failing.png`, `ss2_fuzz_tests_failing_output.txt` | SS2: fuzz tests failing on the original module |
 | `ss3_fixed_run.png`, `ss3_fixed_run_output.txt` | SS3: fixed module run |
