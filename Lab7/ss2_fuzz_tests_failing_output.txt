@@ -1,0 +1,182 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.15.0, pytest-9.2.0, pluggy-1.7.0
+rootdir: Lab7
+plugins: hypothesis-6.170.15
+collected 3 items
+
+test_course_registration_parser.py FFF                                   [100%]
+
+=================================== FAILURES ===================================
+_______________________ test_format_course_code_no_crash _______________________
+  + Exception Group Traceback (most recent call last):
+  |   File "/private/tmp/claude-501/-Users-sanjana-simple-shell-cli/53c2bfa0-9950-4cbb-983b-b05c986f30f8/scratchpad/my_repo/Lab7/test_course_registration_parser.py", line 5, in test_format_course_code_no_crash
+  |     def test_format_course_code_no_crash(s):
+  |                    ^^^
+  | ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/private/tmp/claude-501/-Users-sanjana-simple-shell-cli/53c2bfa0-9950-4cbb-983b-b05c986f30f8/scratchpad/my_repo/Lab7/test_course_registration_parser.py", line 7, in test_format_course_code_no_crash
+    |     result = format_course_code(s)
+    |   File "/private/tmp/claude-501/-Users-sanjana-simple-shell-cli/53c2bfa0-9950-4cbb-983b-b05c986f30f8/scratchpad/my_repo/Lab7/course_registration_parser.py", line 6, in format_course_code
+    |     dept, number = code.split()
+    |     ^^^^^^^^^^^^
+    | ValueError: not enough values to unpack (expected 2, got 0)
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "/private/tmp/claude-501/-Users-sanjana-simple-shell-cli/53c2bfa0-9950-4cbb-983b-b05c986f30f8/scratchpad/my_repo/Lab7/test_course_registration_parser.py", line 9, in test_format_course_code_no_crash
+    |     assert False, f"format_course_code crashed on {s!r} with: {type(e).__name__}: {e}"
+    | AssertionError: format_course_code crashed on '' with: ValueError: not enough values to unpack (expected 2, got 0)
+    | assert False
+    | Failing test case: test_format_course_code_no_crash(
+    |     s='',
+    | )
+    | Explanation:
+    |     These lines were always and only run by failing test cases:
+    |         /private/tmp/claude-501/-Users-sanjana-simple-shell-cli/53c2bfa0-9950-4cbb-983b-b05c986f30f8/scratchpad/my_repo/Lab7/test_course_registration_parser.py:8
+    +---------------- 2 ----------------
+    | Traceback (most recent call last):
+    |   File "/private/tmp/claude-501/-Users-sanjana-simple-shell-cli/53c2bfa0-9950-4cbb-983b-b05c986f30f8/scratchpad/my_repo/Lab7/test_course_registration_parser.py", line 7, in test_format_course_code_no_crash
+    |     result = format_course_code(s)
+    |   File "/private/tmp/claude-501/-Users-sanjana-simple-shell-cli/53c2bfa0-9950-4cbb-983b-b05c986f30f8/scratchpad/my_repo/Lab7/course_registration_parser.py", line 6, in format_course_code
+    |     dept, number = code.split()
+    |                    ^^^^^^^^^^
+    | AttributeError: 'NoneType' object has no attribute 'split'
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "/private/tmp/claude-501/-Users-sanjana-simple-shell-cli/53c2bfa0-9950-4cbb-983b-b05c986f30f8/scratchpad/my_repo/Lab7/test_course_registration_parser.py", line 9, in test_format_course_code_no_crash
+    |     assert False, f"format_course_code crashed on {s!r} with: {type(e).__name__}: {e}"
+    | AssertionError: format_course_code crashed on None with: AttributeError: 'NoneType' object has no attribute 'split'
+    | assert False
+    | Failing test case: test_format_course_code_no_crash(
+    |     s=None,
+    | )
+    | Explanation:
+    |     These lines were always and only run by failing test cases:
+    |         /private/tmp/claude-501/-Users-sanjana-simple-shell-cli/53c2bfa0-9950-4cbb-983b-b05c986f30f8/scratchpad/my_repo/Lab7/test_course_registration_parser.py:8
+    +------------------------------------
+_________________________ test_total_credits_no_crash __________________________
+  + Exception Group Traceback (most recent call last):
+  |   File "/private/tmp/claude-501/-Users-sanjana-simple-shell-cli/53c2bfa0-9950-4cbb-983b-b05c986f30f8/scratchpad/my_repo/Lab7/test_course_registration_parser.py", line 14, in test_total_credits_no_crash
+  |     def test_total_credits_no_crash(s):
+  |                    ^^^
+  | ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/private/tmp/claude-501/-Users-sanjana-simple-shell-cli/53c2bfa0-9950-4cbb-983b-b05c986f30f8/scratchpad/my_repo/Lab7/test_course_registration_parser.py", line 16, in test_total_credits_no_crash
+    |     result = total_credits(s)
+    |   File "/private/tmp/claude-501/-Users-sanjana-simple-shell-cli/53c2bfa0-9950-4cbb-983b-b05c986f30f8/scratchpad/my_repo/Lab7/course_registration_parser.py", line 14, in total_credits
+    |     return sum(int(credit) for credit in text.split(','))
+    |   File "/private/tmp/claude-501/-Users-sanjana-simple-shell-cli/53c2bfa0-9950-4cbb-983b-b05c986f30f8/scratchpad/my_repo/Lab7/course_registration_parser.py", line 14, in <genexpr>
+    |     return sum(int(credit) for credit in text.split(','))
+    |                ~~~^^^^^^^^
+    | ValueError: invalid literal for int() with base 10: ''
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "/private/tmp/claude-501/-Users-sanjana-simple-shell-cli/53c2bfa0-9950-4cbb-983b-b05c986f30f8/scratchpad/my_repo/Lab7/test_course_registration_parser.py", line 18, in test_total_credits_no_crash
+    |     assert False, f"total_credits crashed on {s!r} with: {type(e).__name__}: {e}"
+    | AssertionError: total_credits crashed on '' with: ValueError: invalid literal for int() with base 10: ''
+    | assert False
+    | Failing test case: test_total_credits_no_crash(
+    |     s='',
+    | )
+    | Explanation:
+    |     These lines were always and only run by failing test cases:
+    |         /private/tmp/claude-501/-Users-sanjana-simple-shell-cli/53c2bfa0-9950-4cbb-983b-b05c986f30f8/scratchpad/my_repo/Lab7/test_course_registration_parser.py:17
+    +---------------- 2 ----------------
+    | Traceback (most recent call last):
+    |   File "/private/tmp/claude-501/-Users-sanjana-simple-shell-cli/53c2bfa0-9950-4cbb-983b-b05c986f30f8/scratchpad/my_repo/Lab7/test_course_registration_parser.py", line 16, in test_total_credits_no_crash
+    |     result = total_credits(s)
+    |   File "/private/tmp/claude-501/-Users-sanjana-simple-shell-cli/53c2bfa0-9950-4cbb-983b-b05c986f30f8/scratchpad/my_repo/Lab7/course_registration_parser.py", line 14, in total_credits
+    |     return sum(int(credit) for credit in text.split(','))
+    |                                          ^^^^^^^^^^
+    | AttributeError: 'NoneType' object has no attribute 'split'
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "/private/tmp/claude-501/-Users-sanjana-simple-shell-cli/53c2bfa0-9950-4cbb-983b-b05c986f30f8/scratchpad/my_repo/Lab7/test_course_registration_parser.py", line 18, in test_total_credits_no_crash
+    |     assert False, f"total_credits crashed on {s!r} with: {type(e).__name__}: {e}"
+    | AssertionError: total_credits crashed on None with: AttributeError: 'NoneType' object has no attribute 'split'
+    | assert False
+    | Failing test case: test_total_credits_no_crash(
+    |     s=None,
+    | )
+    | Explanation:
+    |     These lines were always and only run by failing test cases:
+    |         /private/tmp/claude-501/-Users-sanjana-simple-shell-cli/53c2bfa0-9950-4cbb-983b-b05c986f30f8/scratchpad/my_repo/Lab7/test_course_registration_parser.py:17
+    +------------------------------------
+______________________ test_parse_student_record_no_crash ______________________
+  + Exception Group Traceback (most recent call last):
+  |   File "/private/tmp/claude-501/-Users-sanjana-simple-shell-cli/53c2bfa0-9950-4cbb-983b-b05c986f30f8/scratchpad/my_repo/Lab7/test_course_registration_parser.py", line 23, in test_parse_student_record_no_crash
+  |     def test_parse_student_record_no_crash(s):
+  |                    ^^^
+  | ExceptionGroup: Hypothesis found 3 distinct failures. (3 sub-exceptions)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/private/tmp/claude-501/-Users-sanjana-simple-shell-cli/53c2bfa0-9950-4cbb-983b-b05c986f30f8/scratchpad/my_repo/Lab7/test_course_registration_parser.py", line 25, in test_parse_student_record_no_crash
+    |     result = parse_student_record(s)
+    |   File "/private/tmp/claude-501/-Users-sanjana-simple-shell-cli/53c2bfa0-9950-4cbb-983b-b05c986f30f8/scratchpad/my_repo/Lab7/course_registration_parser.py", line 24, in parse_student_record
+    |     "status": parts[2].strip().lower()}
+    |               ~~~~~^^^
+    | IndexError: list index out of range
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "/private/tmp/claude-501/-Users-sanjana-simple-shell-cli/53c2bfa0-9950-4cbb-983b-b05c986f30f8/scratchpad/my_repo/Lab7/test_course_registration_parser.py", line 27, in test_parse_student_record_no_crash
+    |     assert False, f"parse_student_record crashed on {s!r} with: {type(e).__name__}: {e}"
+    | AssertionError: parse_student_record crashed on '|' with: IndexError: list index out of range
+    | assert False
+    | Failing test case: test_parse_student_record_no_crash(
+    |     s='|',
+    | )
+    +---------------- 2 ----------------
+    | Traceback (most recent call last):
+    |   File "/private/tmp/claude-501/-Users-sanjana-simple-shell-cli/53c2bfa0-9950-4cbb-983b-b05c986f30f8/scratchpad/my_repo/Lab7/test_course_registration_parser.py", line 25, in test_parse_student_record_no_crash
+    |     result = parse_student_record(s)
+    |   File "/private/tmp/claude-501/-Users-sanjana-simple-shell-cli/53c2bfa0-9950-4cbb-983b-b05c986f30f8/scratchpad/my_repo/Lab7/course_registration_parser.py", line 23, in parse_student_record
+    |     "name": parts[1].strip(),
+    |             ~~~~~^^^
+    | IndexError: list index out of range
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "/private/tmp/claude-501/-Users-sanjana-simple-shell-cli/53c2bfa0-9950-4cbb-983b-b05c986f30f8/scratchpad/my_repo/Lab7/test_course_registration_parser.py", line 27, in test_parse_student_record_no_crash
+    |     assert False, f"parse_student_record crashed on {s!r} with: {type(e).__name__}: {e}"
+    | AssertionError: parse_student_record crashed on '' with: IndexError: list index out of range
+    | assert False
+    | Failing test case: test_parse_student_record_no_crash(
+    |     s='',  # or any other generated value
+    | )
+    +---------------- 3 ----------------
+    | Traceback (most recent call last):
+    |   File "/private/tmp/claude-501/-Users-sanjana-simple-shell-cli/53c2bfa0-9950-4cbb-983b-b05c986f30f8/scratchpad/my_repo/Lab7/test_course_registration_parser.py", line 25, in test_parse_student_record_no_crash
+    |     result = parse_student_record(s)
+    |   File "/private/tmp/claude-501/-Users-sanjana-simple-shell-cli/53c2bfa0-9950-4cbb-983b-b05c986f30f8/scratchpad/my_repo/Lab7/course_registration_parser.py", line 21, in parse_student_record
+    |     parts = line.split('|')
+    |             ^^^^^^^^^^
+    | AttributeError: 'NoneType' object has no attribute 'split'
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "/private/tmp/claude-501/-Users-sanjana-simple-shell-cli/53c2bfa0-9950-4cbb-983b-b05c986f30f8/scratchpad/my_repo/Lab7/test_course_registration_parser.py", line 27, in test_parse_student_record_no_crash
+    |     assert False, f"parse_student_record crashed on {s!r} with: {type(e).__name__}: {e}"
+    | AssertionError: parse_student_record crashed on None with: AttributeError: 'NoneType' object has no attribute 'split'
+    | assert False
+    | Failing test case: test_parse_student_record_no_crash(
+    |     s=None,  # or any other generated value
+    | )
+    +------------------------------------
+=========================== short test summary info ============================
+FAILED test_course_registration_parser.py::test_format_course_code_no_crash
+FAILED test_course_registration_parser.py::test_total_credits_no_crash - Exce...
+FAILED test_course_registration_parser.py::test_parse_student_record_no_crash
+============================== 3 failed in 1.39s ===============================

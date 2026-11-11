@@ -1,0 +1,71 @@
+$ python course_registration_parser.py
+==== Running format_course_code ====
+Enter a course code as DEPT NUMBER (e.g. cs 301): cs 301
+Formatted course code: CS301
+
+==== Running total_credits ====
+Enter course credits separated by commas (e.g. 4,3,4): 4,3,4
+Total credits: 11
+
+==== Running parse_student_record ====
+Enter a student record as SRN|name|status (e.g. pes1ug23cs001|Asha|regular): pes1ug23cs001|Asha|regular
+Student record: {'srn': 'PES1UG23CS001', 'name': 'Asha', 'status': 'regular'}
+
+$ python course_registration_parser.py
+==== Running format_course_code ====
+Enter a course code as DEPT NUMBER (e.g. cs 301): cs301
+Traceback (most recent call last):
+  File "/private/tmp/claude-501/-Users-sanjana-simple-shell-cli/53c2bfa0-9950-4cbb-983b-b05c986f30f8/scratchpad/buggy/course_registration_parser.py", line 40, in <module>
+    main()
+    ~~~~^^
+  File "/private/tmp/claude-501/-Users-sanjana-simple-shell-cli/53c2bfa0-9950-4cbb-983b-b05c986f30f8/scratchpad/buggy/course_registration_parser.py", line 29, in main
+    print("Formatted course code:", format_course_code(value))
+                                    ~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/private/tmp/claude-501/-Users-sanjana-simple-shell-cli/53c2bfa0-9950-4cbb-983b-b05c986f30f8/scratchpad/buggy/course_registration_parser.py", line 6, in format_course_code
+    dept, number = code.split()
+    ^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+
+$ python course_registration_parser.py
+==== Running format_course_code ====
+Enter a course code as DEPT NUMBER (e.g. cs 301): cs 301
+Formatted course code: CS301
+
+==== Running total_credits ====
+Enter course credits separated by commas (e.g. 4,3,4): 4,,3
+Traceback (most recent call last):
+  File "/private/tmp/claude-501/-Users-sanjana-simple-shell-cli/53c2bfa0-9950-4cbb-983b-b05c986f30f8/scratchpad/buggy/course_registration_parser.py", line 40, in <module>
+    main()
+    ~~~~^^
+  File "/private/tmp/claude-501/-Users-sanjana-simple-shell-cli/53c2bfa0-9950-4cbb-983b-b05c986f30f8/scratchpad/buggy/course_registration_parser.py", line 33, in main
+    print("Total credits:", total_credits(value))
+                            ~~~~~~~~~~~~~^^^^^^^
+  File "/private/tmp/claude-501/-Users-sanjana-simple-shell-cli/53c2bfa0-9950-4cbb-983b-b05c986f30f8/scratchpad/buggy/course_registration_parser.py", line 14, in total_credits
+    return sum(int(credit) for credit in text.split(','))
+  File "/private/tmp/claude-501/-Users-sanjana-simple-shell-cli/53c2bfa0-9950-4cbb-983b-b05c986f30f8/scratchpad/buggy/course_registration_parser.py", line 14, in <genexpr>
+    return sum(int(credit) for credit in text.split(','))
+               ~~~^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+$ python course_registration_parser.py
+==== Running format_course_code ====
+Enter a course code as DEPT NUMBER (e.g. cs 301): cs 301
+Formatted course code: CS301
+
+==== Running total_credits ====
+Enter course credits separated by commas (e.g. 4,3,4): 4,3,4
+Total credits: 11
+
+==== Running parse_student_record ====
+Enter a student record as SRN|name|status (e.g. pes1ug23cs001|Asha|regular): pes1ug23cs001|Asha
+Traceback (most recent call last):
+  File "/private/tmp/claude-501/-Users-sanjana-simple-shell-cli/53c2bfa0-9950-4cbb-983b-b05c986f30f8/scratchpad/buggy/course_registration_parser.py", line 40, in <module>
+    main()
+    ~~~~^^
+  File "/private/tmp/claude-501/-Users-sanjana-simple-shell-cli/53c2bfa0-9950-4cbb-983b-b05c986f30f8/scratchpad/buggy/course_registration_parser.py", line 37, in main
+    print("Student record:", parse_student_record(value))
+                             ~~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/private/tmp/claude-501/-Users-sanjana-simple-shell-cli/53c2bfa0-9950-4cbb-983b-b05c986f30f8/scratchpad/buggy/course_registration_parser.py", line 24, in parse_student_record
+    "status": parts[2].strip().lower()}
+              ~~~~~^^^
+IndexError: list index out of range
